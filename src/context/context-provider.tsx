@@ -3,20 +3,30 @@ import {createContext, ReactNode, useContext, useState} from 'react'
 interface AuxProps {
 	children: ReactNode;
   }
+interface IUser{
+	user:string
+	signin:(user:string,fn:()=>void)=>void
+	signup:(fn:()=>void)=>void
+}
 
 
-const AuthContext = createContext({})
+const AuthContext = createContext<IUser>({
+	user:'',
+	signin:()=>{},
+	signup:()=>{},
+})
 
 export const useAuth = ()=>useContext(AuthContext)
 
 export const AuthProvider = ({children}:AuxProps)=>{
 	const [user, setUser] = useState('')
 
-	const signin=(newUser:string,callback:()=>void)=>{
+
+	const signin =(newUser:string,callback:()=>void)=>{
 		setUser(newUser)
 		callback()
 	}
-	const signup=(callback:()=>void)=>{
+	const signup = (callback:()=>void)=>{
 		setUser('')
 		callback()
 	}
