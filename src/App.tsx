@@ -1,11 +1,8 @@
-import "./App.css";
+import './App.css'
+import { Router } from './router'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">Hello!</header>
-    </div>
-  );
+	return <Router />
 }
 
-export default App;
+export default App
