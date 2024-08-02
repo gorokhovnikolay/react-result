@@ -2,7 +2,7 @@
   "name": "app-react",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3006/",
+  "proxy":"http://localhost:3007/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3003 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
