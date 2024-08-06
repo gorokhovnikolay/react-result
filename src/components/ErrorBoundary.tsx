@@ -6,14 +6,14 @@ interface ItemProps {
 }
 
 class ErrorBoundary extends Component<ItemProps, { hasError: boolean }> {
-	constructor(props: any) {
+	constructor(props: { children: ReactNode }) {
 		super(props)
 		this.state = {
 			hasError: false,
 		}
 	}
 
-	static getDerivedStateFromError(error: any) {
+	static getDerivedStateFromError(error: string) {
 		console.error(error)
 		return {
 			hasError: true,

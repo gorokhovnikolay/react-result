@@ -8,7 +8,7 @@ const componentName = (name: string) => {
 	)
 }
 
-export const Component = (props: any) => {
+export const Component = (props: { [key: string]: string }) => {
 	const Component = componentName(props.name)
 	return (
 		<Suspense fallback='Загрузка...'>

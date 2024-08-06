@@ -27,9 +27,12 @@ export function useSerchBooks(category: string | undefined) {
 				setBooks((prev) => {
 					return {
 						...prev,
-						...res.data.results.reduce((acc: object, item: any) => {
-							return { ...acc, [item.id]: item }
-						}, {}),
+						...res.data.results.reduce(
+							(acc: object, item: { [key: string]: string | number }) => {
+								return { ...acc, [item.id]: item }
+							},
+							{},
+						),
 					}
 				})
 				setLoading(false)

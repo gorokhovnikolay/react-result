@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom'
 import { NotFounde, Item, Login, Register, Home } from './pages'
 import { PrivatRoute } from './pages/privat-route'
 import { Component } from './components/Component'
-import { Test } from './components/Test'
 
 export const Router = () => {
 	return (
@@ -27,7 +26,6 @@ export const Router = () => {
 			</Route>
 			<Route path='/login' element={<Login />} />
 			<Route path='/register' element={<Register />} />
-			<Route path='/test' element={<Test />} />
 			<Route path='*' element={<NotFounde />} />
 		</Routes>
 	)

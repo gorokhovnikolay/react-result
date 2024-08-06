@@ -12,8 +12,6 @@ export const Item = () => {
 	const [error, setError] = useState('')
 	const [isLoading, setIsLoading] = useState(true)
 
-	console.log(location)
-
 	useEffect(() => {
 		setError('')
 		setIsLoading(true)

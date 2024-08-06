@@ -32,7 +32,6 @@ export const Home = () => {
 						<NavLink to='/character'>Герои</NavLink>
 						<NavLink to='/location'>Локации</NavLink>
 						<NavLink to='/episode'>Эпизоды</NavLink>
-						<NavLink to='/test'>test</NavLink>
 					</div>
 				</nav>
 			</header>

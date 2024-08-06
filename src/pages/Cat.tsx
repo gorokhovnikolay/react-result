@@ -7,7 +7,7 @@ export const Cat = () => {
 
 	const { books, loading, error, hasMore, setPage } = useSerchBooks(category)
 
-	const observer = useRef<any>()
+	const observer = useRef<IntersectionObserver>()
 	const lastNodeRef = useCallback(
 		(node: any) => {
 			if (loading) return

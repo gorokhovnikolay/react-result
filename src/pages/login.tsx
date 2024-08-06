@@ -6,7 +6,6 @@ import { IValues } from '../App'
 export const Login = () => {
 	const { signin } = useAuth()
 	const location = useLocation()
-	console.log(location)
 	const navigation = useNavigate()
 	const path = (location.state?.from as string) || '/'
 	const onSubmit = (values: IValues) => {
